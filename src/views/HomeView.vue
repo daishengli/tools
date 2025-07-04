@@ -86,7 +86,7 @@ const tools = ref([
     id: 7,
     name: '二维码',
     description: '二维码生成与解析工具',
-    path: '/qrcode',
+    path: 'https://www.codebox.club/zh',
     bgColor: '#FAFAFA',
     iconColor: '#424242',
     icon: 'i-carbon-qr-code',
@@ -94,6 +94,10 @@ const tools = ref([
 ])
 
 const navigateToTool = (path) => {
-  router.push(path)
+  if (path.startsWith('http')) {
+    window.open(path, '_blank')
+  } else {
+    router.push(path)
+  }
 }
 </script>
