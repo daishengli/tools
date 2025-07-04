@@ -9,6 +9,16 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue'),
     },
     {
+      path: '/image',
+      name: 'image',
+      component: () => import('../views/ImageView.vue'),
+    },
+    {
+      path: '/text',
+      name: 'text',
+      component: () => import('../views/TextView.vue'),
+    },
+    {
       path: '/cover-generator',
       name: 'cover-generator',
       component: () => import('../views/CoverGeneratorView.vue'),
